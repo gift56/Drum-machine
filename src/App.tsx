@@ -17,6 +17,7 @@ const App = () => {
             active={active}
           />
         ))}
+        <h4 className="text-xl font-medium">Volume</h4>
       </div>
     </main>
   );
