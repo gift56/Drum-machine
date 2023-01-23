@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Pad from "./components/Pad";
+import Volume from "./components/Volume";
 import { audioSound } from "./data/audioSound";
 
 const App = () => {
@@ -17,7 +18,7 @@ const App = () => {
             active={active}
           />
         ))}
-        <h4 className="text-xl font-medium">Volume</h4>
+        <Volume />
       </div>
     </main>
   );
