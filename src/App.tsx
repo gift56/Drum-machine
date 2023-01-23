@@ -8,6 +8,7 @@ const App = () => {
   const [active, setActive] = useState(false);
   const [volume, setVolume] = useState(1);
   const [recording, setRecording] = useState("");
+  const [speed, setSpeed] = useState(0.5);
 
   const playRecording = () => {
     let playingAudio = recording.split(" ");
@@ -42,6 +43,8 @@ const App = () => {
           recording={recording}
           setRecording={setRecording}
           playRecording={playRecording}
+          speed={speed}
+          setSpeed={setSpeed}
         />
       </div>
     </main>
