@@ -1,5 +1,5 @@
 const Records = ({ recording }: any) => {
-  return <div>Records</div>;
+  return <h3>{recording}</h3>;
 };
 
 export default Records;
