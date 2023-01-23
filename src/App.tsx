@@ -27,6 +27,7 @@ const App = () => {
     );
   };
 
+  
   return (
     <main className="bg-[#0C131A] w-full text-white h-screen">
       <div className="text-center">
