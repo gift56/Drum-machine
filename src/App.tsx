@@ -9,6 +9,8 @@ const App = () => {
   const [volume, setVolume] = useState(1);
   const [recording, setRecording] = useState("");
 
+  const playRecording = () => {};
+
   return (
     <main className="bg-[#0C131A] w-full text-white h-screen">
       <div className="text-center">
@@ -24,7 +26,11 @@ const App = () => {
           />
         ))}
         <Volume volume={volume} setVolume={setVolume} />
-        <Records recording={recording} setRecording={setRecording} />
+        <Records
+          recording={recording}
+          setRecording={setRecording}
+          playRecording={playRecording}
+        />
       </div>
     </main>
   );
