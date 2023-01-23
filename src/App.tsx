@@ -44,7 +44,7 @@ const App = () => {
           ))}
         </div>
       </div>
-      <h3>{recording}</h3>
+      <h3 className="text-center">{recording}</h3>
       <div className="flex w-full items-center justify-center gap-5">
         <Volume
           volume={volume}
@@ -57,6 +57,7 @@ const App = () => {
           recording={recording}
           setRecording={setRecording}
           playRecording={playRecording}
+          setVolume={setVolume}
         />
       </div>
       <p className="text-base font-medium">
