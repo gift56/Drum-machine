@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 const Volume = ({ setVolume, volume, speed, setSpeed, recording }: any) => {
   return (
     <div
@@ -19,7 +17,7 @@ const Volume = ({ setVolume, volume, speed, setSpeed, recording }: any) => {
             value={volume}
             onChange={(e) => setVolume(e.target.value)}
           />
-          <p className="text-sm text-gray-300 lowercase ml-1">Highest {volume}</p>
+          <p className="text-sm text-gray-300 lowercase ml-1">Highest</p>
         </div>
       </div>
       {recording && (

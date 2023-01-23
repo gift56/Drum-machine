@@ -1,9 +1,4 @@
-const Records = ({
-  recording,
-  setRecording,
-  playRecording,
-  setVolume,
-}: any) => {
+const Records = ({ recording, setRecording, playRecording }: any) => {
   return (
     <div>
       {recording && (
@@ -16,10 +11,7 @@ const Records = ({
               Play
             </button>
             <button
-              onClick={() => {
-                setRecording("");
-                setVolume(0);
-              }}
+              onClick={() => setRecording("")}
               className="bg-red-500 py-2 px-5 cursor-pointer rounded outline-none"
             >
               Clear

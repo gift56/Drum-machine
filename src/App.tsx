@@ -57,7 +57,6 @@ const App = () => {
           recording={recording}
           setRecording={setRecording}
           playRecording={playRecording}
-          setVolume={setVolume}
         />
       </div>
       <p className="text-base font-medium">
