@@ -9,7 +9,17 @@ const App = () => {
   const [volume, setVolume] = useState(1);
   const [recording, setRecording] = useState("");
 
-  const playRecording = () => {};
+  const playRecording = () => {
+    let playingAudio = recording.split(" ");
+    let index = 0;
+    const playing = setInterval(() => {
+      const audioTag: any = document.getElementById(playingAudio[index]);
+      audioTag.currentTime = 0;
+      audioTag.play();
+      audioTag.volume = volume;
+      index++;
+    }, 600);
+  };
 
   return (
     <main className="bg-[#0C131A] w-full text-white h-screen">
