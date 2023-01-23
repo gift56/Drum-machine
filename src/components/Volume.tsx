@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 const Volume = ({ setVolume, volume, speed, setSpeed, recording }: any) => {
   return (
     <div
@@ -7,15 +9,18 @@ const Volume = ({ setVolume, volume, speed, setSpeed, recording }: any) => {
     >
       <div className="flex flex-col gap-2 items-start justify-center w-full">
         <h4 className="text-xl font-medium">Volume</h4>
-        <input
-          type="range"
-          step={0.01}
-          max="1"
-          min="0"
-          className="w-full"
-          value={volume}
-          onChange={(e) => setVolume(e.target.value)}
-        />
+        <div className="flex items-center w-full">
+          <input
+            type="range"
+            step={0.01}
+            max="1"
+            min="0"
+            className="w-full"
+            value={volume}
+            onChange={(e) => setVolume(e.target.value)}
+          />
+          <p className="text-sm text-gray-300 lowercase ml-1">Highest</p>
+        </div>
       </div>
       {recording && (
         <div>

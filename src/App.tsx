@@ -29,9 +29,9 @@ const App = () => {
 
   return (
     <main className="bg-[#0C131A] w-full text-white min-h-screen flex flex-col gap-5 justify-center items-center">
-      <div className="flex flex-col w-full items-center justify-center">
+      <div className="flex flex-col w-full items-center justify-center gap-4">
         <h2 className="text-2xl font-semibold">Drum Machine</h2>
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-3 border rounded">
           {audioSound.map((clip) => (
             <Pad
               clip={clip}
