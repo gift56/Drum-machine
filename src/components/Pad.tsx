@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const Pad = ({ clip, active, setActive }: any) => {
+const Pad = ({ clip, volume }: any) => {
   const handleKeyPress = (e: any) => {
     if (e.keyCode === clip.keyCode) {
       playSound();
@@ -16,9 +16,9 @@ const Pad = ({ clip, active, setActive }: any) => {
 
   const playSound = () => {
     const audioTag: any = document.getElementById(clip.keyTrigger);
-
     audioTag.currentTime = 0;
     audioTag.play();
+    audioTag.volume = volume;
   };
 
   return (
