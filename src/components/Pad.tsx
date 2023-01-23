@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const Pad = () => {
-  return (
-    <div>Pad</div>
-  )
-}
+const Pad = ({ clip }: any) => {
+  return <div>Pad</div>;
+};
 
-export default Pad
+export default Pad;
