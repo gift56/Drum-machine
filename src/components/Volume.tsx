@@ -15,7 +15,7 @@ const Volume = ({ setVolume, volume, speed, setSpeed, recording }: any) => {
             step={0.01}
             max="1"
             min="0"
-            className="w-full h-4 appearance-none rounded-full bg-[#0Dcccc] focus:outline-none"
+            className="w-full h-4 appearance-none border-2 rounded-full bg-[#0Dcccc] focus:outline-none"
             value={volume}
             onChange={(e) => setVolume(e.target.value)}
           />
@@ -31,7 +31,7 @@ const Volume = ({ setVolume, volume, speed, setSpeed, recording }: any) => {
               step={0.01}
               max="1.2"
               min="0.1"
-              className="w-full h-4 appearance-none rounded-full bg-[#0Dcccc] focus:outline-none"
+              className="w-full h-4 appearance-none border-2 rounded-full bg-[#0Dcccc] focus:outline-none"
               value={speed}
               onChange={(e) => setSpeed(e.target.value)}
             />
