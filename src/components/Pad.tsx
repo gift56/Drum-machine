@@ -1,6 +1,15 @@
 import { useEffect } from "react";
 
-const Pad = ({ clip, volume, setRecording }: any) => {
+interface Iprop {
+  clip: any;
+  volume: number;
+  setRecording: any;
+  setActive: any;
+  active: boolean;
+}
+
+const Pad = ({ clip, volume, setRecording, active, setActive }: Iprop) => {
+  console.log(clip);
   const handleKeyPress = (e: any) => {
     if (e.keyCode === clip.keyCode) {
       playSound();
