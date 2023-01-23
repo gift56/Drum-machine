@@ -24,7 +24,7 @@ const App = () => {
           />
         ))}
         <Volume volume={volume} setVolume={setVolume} />
-        <Records recording={recording} />
+        <Records recording={recording} setRecording={setRecording} />
       </div>
     </main>
   );
