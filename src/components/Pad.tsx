@@ -1,6 +1,19 @@
-import {useEffect} from "react";
+import { useEffect } from "react";
 
 const Pad = ({ clip }: any) => {
+  const handleKeyPress = (e: any) => {
+    if (e.keyCode === clip.keyCode) {
+      playSound();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyPress);
+    return () => {
+      document.removeEventListener("keydown", handleKeyPress);
+    };
+  }, []);
+
   const playSound = () => {
     const audioTag: any = document.getElementById(clip.keyTrigger);
     audioTag.currentTime = 0;
