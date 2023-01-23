@@ -18,7 +18,9 @@ const App = () => {
       audioTag.play();
       audioTag.volume = volume;
       index++;
-    }, 600);
+    }, 300);
+
+    setTimeout(() => clearInterval(playing), 300 * playingAudio.length - 1);
   };
 
   return (
