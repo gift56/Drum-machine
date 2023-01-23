@@ -12,8 +12,8 @@ input[type="range"]::-webkit-slider-thumb {
   height: 16px;
   background-color: white;
   -webkit-appearance: none;
-  border: 1px solid black;
+  border: 1px solid rgb(71, 109, 167);
   border-radius: 3px;
-  box-shadow: 1px 1px 1px black, 0px 0px 1px gray;
+  box-shadow: 1px 1px 1px rgb(71, 109, 167), 0px 0px 1px rgb(30, 145, 139);
   cursor: pointer;
 }
