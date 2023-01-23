@@ -6,3 +6,14 @@
 * {
   font-family: "Spline Sans", sans-serif;
 }
+
+input[type="range"]::-webkit-slider-thumb {
+  width: 10px;
+  height: 16px;
+  background-color: white;
+  -webkit-appearance: none;
+  border: 1px solid black;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px black, 0px 0px 1px gray;
+  cursor: pointer;
+}
