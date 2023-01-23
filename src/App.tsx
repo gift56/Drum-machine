@@ -5,6 +5,7 @@ import { audioSound } from "./data/audioSound";
 
 const App = () => {
   const [active, setActive] = useState(false);
+  const [volume, setVolume] = useState(1)
 
   return (
     <main className="bg-[#0C131A] w-full text-white h-screen">
@@ -18,7 +19,7 @@ const App = () => {
             active={active}
           />
         ))}
-        <Volume />
+        <Volume volume={volume} setVolume={setVolume} />
       </div>
     </main>
   );
