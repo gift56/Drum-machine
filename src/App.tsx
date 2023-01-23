@@ -27,28 +27,36 @@ const App = () => {
     );
   };
 
-  
   return (
-    <main className="bg-[#0C131A] w-full text-white h-screen">
-      <div className="text-center">
+    <main className="bg-[#0C131A] w-full text-white min-h-screen flex flex-col gap-5 justify-center items-center">
+      <div className="flex flex-col w-full items-center justify-center">
         <h2 className="text-2xl font-semibold">Drum Machine</h2>
-        {audioSound.map((clip) => (
-          <Pad
-            clip={clip}
-            key={clip.id}
-            setActive={setActive}
-            active={active}
-            volume={volume}
-            setRecording={setRecording}
-          />
-        ))}
-        <Volume volume={volume} setVolume={setVolume} />
+        <div className="grid grid-cols-3">
+          {audioSound.map((clip) => (
+            <Pad
+              clip={clip}
+              key={clip.id}
+              setActive={setActive}
+              active={active}
+              volume={volume}
+              setRecording={setRecording}
+            />
+          ))}
+        </div>
+      </div>
+      <h3>{recording}</h3>
+      <div className="flex w-full items-center justify-center gap-5">
+        <Volume
+          volume={volume}
+          setVolume={setVolume}
+          speed={speed}
+          setSpeed={setSpeed}
+          recording={recording}
+        />
         <Records
           recording={recording}
           setRecording={setRecording}
           playRecording={playRecording}
-          speed={speed}
-          setSpeed={setSpeed}
         />
       </div>
     </main>
