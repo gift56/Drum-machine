@@ -28,41 +28,49 @@ const App = () => {
   };
 
   return (
-    <>
-      <p><i>created by</i><a href="https://github.com/gift56">Efe Gift</a></p>
-      <main className="bg-[#0C131A] w-full text-white min-h-screen flex flex-col gap-5 justify-center items-center">
-        <div className="flex flex-col w-full items-center justify-center gap-4">
-          <h2 className="text-2xl font-semibold">Drum Machine</h2>
-          <div className="grid grid-cols-3 border rounded">
-            {audioSound.map((clip) => (
-              <Pad
-                clip={clip}
-                key={clip.id}
-                setActive={setActive}
-                active={active}
-                volume={volume}
-                setRecording={setRecording}
-              />
-            ))}
-          </div>
+    <main className="bg-[#0C131A] w-full text-white min-h-screen flex flex-col gap-5 justify-center items-center">
+      <div className="flex flex-col w-full items-center justify-center gap-4">
+        <h2 className="text-2xl font-semibold">Drum Machine</h2>
+        <div className="grid grid-cols-3 border rounded">
+          {audioSound.map((clip) => (
+            <Pad
+              clip={clip}
+              key={clip.id}
+              setActive={setActive}
+              active={active}
+              volume={volume}
+              setRecording={setRecording}
+            />
+          ))}
         </div>
-        <h3>{recording}</h3>
-        <div className="flex w-full items-center justify-center gap-5">
-          <Volume
-            volume={volume}
-            setVolume={setVolume}
-            speed={speed}
-            setSpeed={setSpeed}
-            recording={recording}
-          />
-          <Records
-            recording={recording}
-            setRecording={setRecording}
-            playRecording={playRecording}
-          />
-        </div>
-      </main>
-    </>
+      </div>
+      <h3>{recording}</h3>
+      <div className="flex w-full items-center justify-center gap-5">
+        <Volume
+          volume={volume}
+          setVolume={setVolume}
+          speed={speed}
+          setSpeed={setSpeed}
+          recording={recording}
+        />
+        <Records
+          recording={recording}
+          setRecording={setRecording}
+          playRecording={playRecording}
+        />
+      </div>
+      <p className="text-base font-medium">
+        <i>created by</i>
+        {` `}{" "}
+        <a
+          href="https://github.com/gift56"
+          className="font-bold text-[#0dcccc]"
+          target="_blank"
+        >
+          Efe Gift
+        </a>
+      </p>
+    </main>
   );
 };
 
