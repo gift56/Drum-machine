@@ -1,11 +1,13 @@
 import { useState } from "react";
 import Pad from "./components/Pad";
+import Records from "./components/Records";
 import Volume from "./components/Volume";
 import { audioSound } from "./data/audioSound";
 
 const App = () => {
   const [active, setActive] = useState(false);
   const [volume, setVolume] = useState(1);
+  const [recording, setRecording] = useState("");
 
   return (
     <main className="bg-[#0C131A] w-full text-white h-screen">
@@ -18,9 +20,11 @@ const App = () => {
             setActive={setActive}
             active={active}
             volume={volume}
+            setRecording={setRecording}
           />
         ))}
         <Volume volume={volume} setVolume={setVolume} />
+        <Records recording={recording} />
       </div>
     </main>
   );
