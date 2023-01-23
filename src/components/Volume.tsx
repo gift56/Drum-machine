@@ -25,15 +25,18 @@ const Volume = ({ setVolume, volume, speed, setSpeed, recording }: any) => {
       {recording && (
         <div>
           <h4 className="text-xl font-medium">Speed</h4>
-          <input
-            type="range"
-            step={0.01}
-            max="1.2"
-            min="0.1"
-            className="w-full"
-            value={speed}
-            onChange={(e) => setSpeed(e.target.value)}
-          />
+          <div className="w-full flex item-center">
+            <input
+              type="range"
+              step={0.01}
+              max="1.2"
+              min="0.1"
+              className="w-full"
+              value={speed}
+              onChange={(e) => setSpeed(e.target.value)}
+            />
+            <p className="text-sm text-gray-300 lowercase ml-1">slow</p>
+          </div>
         </div>
       )}
     </div>
