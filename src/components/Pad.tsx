@@ -1,7 +1,11 @@
-import React from "react";
+import {useEffect} from "react";
 
 const Pad = ({ clip }: any) => {
-  const playSound = () => {};
+  const playSound = () => {
+    const audioTag: any = document.getElementById(clip.keyTrigger);
+    audioTag.currentTime = 0;
+    audioTag.play();
+  };
 
   return (
     <button
